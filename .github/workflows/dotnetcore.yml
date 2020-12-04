@@ -1,0 +1,19 @@
+name: .NET Core
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        dotnet: [ '3.1.x', 'net5.0' ]
+    name: Dotnet Core ${{ matrix.dotnet }} demo
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup dotnet
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: ${{ matrix.dotnet }}
+      - run: dotnet build -f ${{ matrix.dotnet }}
+	  - run: dotnet test
