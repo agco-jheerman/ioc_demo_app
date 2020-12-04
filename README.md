@@ -1,4 +1,4 @@
-# netcore-ioc-demo
+# ioc_demo_app
 
 This project is a very basic example of implementing an Inversion-of-Control(IoC) Container pattern for a .net core console app
 
@@ -23,4 +23,9 @@ dotnet build -f net5.0
 ## Run the solution
 ```bash
 dotnet run
+```
+
+## Run unit tests
+```bash
+dotnet test
 ```
