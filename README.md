@@ -1,6 +1,8 @@
 # ioc_demo_app
 
 This project is a very basic example of implementing an Inversion-of-Control(IoC) Container pattern for a .net core console app
+The solution targets .Net core 3.1 framework since that is the highest supported version in AWS Lambda as of the release
+of this demo solution
 
 ## Installing .net core
 ```bash
@@ -16,8 +18,8 @@ https://dotnet.microsoft.com/download/dotnet-core
 # To build and target the .net core 3.1 framework
 dotnet build -f netcoreapp3.1
 
-# To build and target the .net core 5.0 framework
-dotnet build -f net5.0
+# The default target framework is .net core 3.1, so this command will work as well
+dotnet build
 ```
 
 ## Run the solution
@@ -27,5 +29,5 @@ dotnet run
 
 ## Run unit tests
 ```bash
-dotnet test
+dotnet test ioc_demo.Tests/ 
 ```
