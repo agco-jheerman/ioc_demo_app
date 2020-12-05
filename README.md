@@ -20,6 +20,7 @@ dotnet build -f netcoreapp3.1
 
 # The default target framework is .net core 3.1, so this command will work as well
 dotnet build
+```
 
 ## Run the solution
 ```bash
